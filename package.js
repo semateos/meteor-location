@@ -3,14 +3,16 @@ Package.describe({
 });
 
 Package.on_use(function (api, where) {
-  api.use(['deps', 'page-js-ie-support'], 'client');
+    api.use(['deps', 'page-js-ie-support'], 'client');
   
-  api.add_files('location.js', 'client');
+    api.add_files('location.js', 'client');
+
+    api.export("Meteor");
 });
 
 
 Package.on_test(function (api) {
-  api.use(['tinytest', 'meteor-location'], 'client');
+    api.use(['tinytest', 'meteor-location'], 'client');
   
-  api.add_files('location_tests.js', 'client');
+    api.add_files('location_tests.js', 'client');
 });
