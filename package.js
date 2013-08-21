@@ -7,7 +7,9 @@ Package.on_use(function (api, where) {
   
     api.add_files('location.js', 'client');
 
-    api.export("Meteor");
+    if(api.export){
+    	api.export("Meteor");
+    }
 });
 
 
